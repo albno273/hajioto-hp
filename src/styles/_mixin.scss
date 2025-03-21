@@ -1,0 +1,22 @@
+@mixin mq($device) {
+  $breakpoint: (
+    "pc": "min-width: 1024px",
+    "tab": "min-width: 600px",
+    "sp": "max-width: 599px",
+  ) !default;
+
+  @media screen and (#{map-get($breakpoint, $device)}) {
+    @content;
+  }
+}
+
+@mixin mq-tab-range() {
+  $breakpoint: (
+    "pc": "1023px",
+    "tab": "600px",
+  ) !default;
+
+  @media screen and (min-width: #{map-get($breakpoint, 'tab')}) and (max-width: #{map-get($breakpoint, 'pc')}) {
+    @content;
+  }
+}
