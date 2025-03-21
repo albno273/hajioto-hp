@@ -174,4 +174,8 @@ dist
 
 ### Vercel ###
 
+# happy-css-modules
+*.scss.d.ts
+*.scss.d.ts.map
+
 # End of https://www.toptal.com/developers/gitignore/api/node,nextjs,vercel

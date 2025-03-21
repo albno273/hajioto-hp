@@ -1,24 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# hajioto-hp
+
+## About
+
+「拝啓、はじまりの音へ」公式ホームページのリポジトリ
 
 ## Getting Started
 
-First, run the development server:
+1. `.env.local` ファイルを作成し、以下の内容を記述する
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```env
+   SERVICE_DOMAIN=xxx
+   API_KEY=xxx
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   xxx の部分は microCMS を参照。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. `yarn install`
+3. `yarn dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+localhost:3000 でアクセス可能。
 
 ## Learn More
 

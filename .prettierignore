@@ -1,0 +1,8 @@
+# build forder
+.next
+dist
+node_modules
+next-env.d.ts
+**/*.scss.d.ts
+**/*.scss.d.ts.map
+**/*.md
