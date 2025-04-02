@@ -5,7 +5,7 @@
     "sp": "max-width: 599px",
   ) !default;
 
-  @media screen and (#{map.get($breakpoint, $device)}) {
+  @media screen and (#{map-get($breakpoint, $device)}) {
     @content;
   }
 }
