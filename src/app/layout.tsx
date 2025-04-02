@@ -3,6 +3,7 @@ import { KiwiMaru } from "@/utils/fonts";
 
 import "@/styles/reset.scss";
 import "@/styles/global.scss";
+import Footer from "@/views/footer";
 
 // TODO: metadata 設定
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={KiwiMaru.variable}>{children}</body>
+      <Footer />
     </html>
   );
 }
