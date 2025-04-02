@@ -17,11 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <html lang="ja">
-        <body className={KiwiMaru.variable}>{children}</body>
-      </html>
-      <Footer />
-    </>
+    <html lang="ja">
+      <body className={KiwiMaru.variable}>
+        {children}
+        <Footer />
+      </body>
+    </html>
   );
 }
