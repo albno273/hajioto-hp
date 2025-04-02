@@ -7,8 +7,8 @@ export default async function Home() {
   const casts = await getCasts();
 
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div className={styles.body}>
+      <main>
         <p>{casts.contents[0].name}</p>
       </main>
     </div>
