@@ -1,0 +1,11 @@
+{
+    "stylelint.validate": [
+        "css",
+        "scss"
+    ],
+    "stylelint.stylelintPath": "node_modules/stylelint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": "explicit"
+    }
+}

@@ -24,6 +24,7 @@
     "@types/react-dom": "^19",
     "@types/stylelint": "^14.0.0",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "classnames": "^2.5.1",
     "eslint": "^9",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-next": "^15.2.3",
