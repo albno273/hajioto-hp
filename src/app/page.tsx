@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import styles from "@/styles/views/Home.module.scss";
+import styles from "@/styles/app/Home.module.scss";
 
 import { getCasts } from "@/libs/client";
 
