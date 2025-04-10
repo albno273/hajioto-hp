@@ -1,0 +1,16 @@
+// import Image from "next/image";
+import styles from '@/styles/app/Home.module.scss';
+
+import { getCasts } from '@/libs/client';
+
+export default async function Casts() {
+  const casts = await getCasts();
+
+  return (
+    <div className={styles.body}>
+      <main>
+        <p>{casts.contents[0].name}</p>
+      </main>
+    </div>
+  );
+}

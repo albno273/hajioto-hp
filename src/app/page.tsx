@@ -1,15 +1,17 @@
 // import Image from "next/image";
-import styles from "@/styles/app/Home.module.scss";
+import s from '@/styles/app/Home.module.scss';
+import { getCasts } from '@/libs/client';
 
-import { getCasts } from "@/libs/client";
+import Footer from '@/views/footer';
 
 export default async function Home() {
   const casts = await getCasts();
 
   return (
-    <div className={styles.body}>
+    <div className={s.body}>
       <main>
-        <p>{casts.contents[0].name}</p>
+        <p className={s.tmp}>{casts.contents[0].name}</p>
+        <Footer />
       </main>
     </div>
   );
