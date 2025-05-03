@@ -1,9 +1,6 @@
 import { createClient } from 'microcms-js-sdk';
 
-// TODO: 要整備
-export type Cast = {
-  name: string;
-};
+import { Cast } from '@/types';
 
 if (!process.env.SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required');

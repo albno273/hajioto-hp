@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { kiwiMaru } from '@/utils/fonts';
 import cx from 'classnames';
+import Image from 'next/image';
 
 import '@/styles/reset.scss';
 import '@/styles/global.scss';
@@ -22,7 +23,9 @@ const Layout: React.FC<Props> = ({ children }) => {
       <body className={cx(kiwiMaru.variable, s.layout)}>
         <main className={s.main}>
           <div className={s.left}>
-            <div className={s.logo}>ここにロゴを表示</div>
+            <div className={s.logo}>
+              <Image src='/logo/logo_blur.png' alt='logo' fill className={s.image} />
+            </div>
           </div>
           <div className={s.right}>
             <div className={s.nav}>ここにナビゲーションを表示</div>

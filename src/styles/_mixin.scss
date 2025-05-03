@@ -20,3 +20,7 @@
     @content;
   }
 }
+
+@mixin section-spacing {
+  margin-block: 2.5rem;
+}
