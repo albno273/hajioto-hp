@@ -12,7 +12,7 @@ $z-btn: 50;
   z-index: $z-nav;
   width: $nav-w;
   overflow-y: auto;
-  background: #fff;
+  background: $c-logo-gradient;
   box-shadow: -4px 0 12px rgba(#000, 0.08);
 
   /* open クラスで画面内へ */
@@ -20,6 +20,13 @@ $z-btn: 50;
   transition: transform 0.35s;
   &.open {
     transform: translateX(-100%);
+  }
+
+  @include mq(pc) {
+    background: transparent;
+    box-shadow: none;
+    transform: translateX(calc((-100% + #{$s-sp-max}) / 2));
+    transition: none;
   }
 
   .list {
@@ -33,7 +40,7 @@ $z-btn: 50;
     .item a {
       font-size: 1.05rem;
       font-weight: 600;
-      color: lightblue;
+      color: white;
       text-decoration: none;
     }
   }
@@ -53,14 +60,14 @@ $z-btn: 50;
   width: 54px;
   height: 54px;
   cursor: pointer;
-  background: lightblue;
-  border: none;
+  background: white;
+  border: 1px solid $c-logo-gradient;
   border-radius: 50%;
 
   span {
     width: 24px;
     height: 3px;
-    background: #fff;
+    background: $c-logo-gradient;
     border-radius: 2px;
   }
 

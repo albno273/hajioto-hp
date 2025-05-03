@@ -35,9 +35,7 @@ const Layout: React.FC<Props> = ({ children }) => {
               <Image src='/logo/logo_blur.png' alt='logo' fill className={s.image} />
             </div>
           </div>
-          <div className={s.right}>
-            <div className={s.nav}>ここにナビゲーションを表示</div>
-          </div>
+          <div className={s.right} />
         </main>
         <div className={s.center}>
           {children}

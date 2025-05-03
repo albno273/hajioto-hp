@@ -52,6 +52,7 @@
 
     .right {
       right: 0;
+      background: $c-logo-gradient-reverse;
 
       .nav {
         display: none;
@@ -64,7 +65,8 @@
   }
 
   .center {
-    width: $s-sp-max;
+    width: 100%;
+    max-width: $s-sp-max;
     margin: 0 auto;
     overflow-y: clip;
 
