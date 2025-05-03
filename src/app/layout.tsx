@@ -20,9 +20,11 @@ export const metadata: Metadata = {
 };
 
 const items: NavItem[] = [
-  { id: 'top', label: 'トップ', href: '/' },
-  { id: 'about', label: '概要', href: '/about' },
-  { id: 'tickets', label: 'チケット', href: '/tickets' },
+  { id: 'top', label: 'トップ', href: '#top' },
+  { id: 'about', label: '概要', href: '#about' },
+  { id: 'casts', label: '出演者', href: '#casts' },
+  { id: 'ticket', label: 'チケット', href: '#ticket' },
+  { id: 'attention', label: '注意事項', href: '#attention' },
 ];
 
 const Layout: React.FC<Props> = ({ children }) => {
