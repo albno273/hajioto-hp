@@ -21,6 +21,7 @@
 
     .left {
       left: 0;
+      background: $c-logo-gradient;
 
       .logo {
         display: none;
@@ -51,7 +52,6 @@
 
     .right {
       right: 0;
-      background-color: lightskyblue;
 
       .nav {
         display: none;

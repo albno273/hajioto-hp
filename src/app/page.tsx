@@ -2,13 +2,14 @@ import Image from 'next/image';
 
 import s from '@/styles/app/Home.module.scss';
 
-import { getCasts } from '@/libs/client';
+import { getAttentions, getCasts } from '@/libs/client';
 
 import Slider from '@/views/slider';
 import Footer from '@/views/footer';
 
 const Home: React.FC = async () => {
   const casts = await getCasts();
+  const attentions = await getAttentions();
 
   return (
     <div className={s.home}>
@@ -39,6 +40,13 @@ const Home: React.FC = async () => {
       </div>
       <div className={s.attention}>
         <p className={s.subtitle}>注意事項</p>
+        <ul className={s.list}>
+          {attentions.contents.map((attention, id) => (
+            <li className={s.item} key={`attention-${id}`}>
+              {attention.content}
+            </li>
+          ))}
+        </ul>
       </div>
       <Footer />
     </div>

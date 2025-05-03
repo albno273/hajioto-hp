@@ -51,7 +51,7 @@
   }
 
   .casts {
-    margin: 3rem 1rem;
+    margin: 3rem 0;
     text-align: center;
 
     .subtitle {
@@ -73,7 +73,7 @@
   }
 
   .ticket {
-    margin: 3rem 1rem;
+    margin: 3rem 0;
     text-align: center;
 
     .subtitle {
@@ -84,13 +84,39 @@
   }
 
   .attention {
-    margin: 3rem 1rem;
+    margin: 3rem 0;
     text-align: center;
 
     .subtitle {
       margin-bottom: 3rem;
       font-size: 2.8rem;
       font-weight: bold;
+    }
+
+    .list {
+      padding: 0;
+      margin: 0;
+      list-style: none; /* デフォルトの丸を消す */
+
+      .item {
+        /* アクセント：左端に 3px のライン */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.7rem 1rem;
+        margin: 0.4rem 1rem 0;
+
+        &::before {
+          position: absolute;
+          inset-block: 0; /* top:0; bottom:0; と同じ */
+          left: 0;
+          width: 3px;
+          content: '';
+          background: lightblue; /* 共通カラー */
+          opacity: 0.6;
+        }
+      }
     }
   }
 }
