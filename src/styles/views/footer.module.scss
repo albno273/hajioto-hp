@@ -1,38 +1,49 @@
-@use "src/styles/mixin.scss" as *;
+@use 'src/styles/mixin.scss' as *;
+@use 'src/styles/constants.scss' as *;
 
 .footer {
-  color: rgb(19, 48, 212);
-  grid-row-start: 57;
-  display: flex;
-  gap: 24px;
+  width: $s-sp-max;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  background-color: #333;
 
   @include mq(sp) {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
   }
 
-  a {
+  .container {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
-    gap: 8px;
   }
 
-  img {
-    flex-shrink: 0;
+  .logo {
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
   }
-}
 
-@media (hover: hover) and (pointer: fine) {
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+  .socials {
+    display: flex;
+    gap: 15px;
+
+    a {
+      font-size: 0.9rem;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-}
 
-@media (hover: hover) and (pointer: fine) {
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+  .copy {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #aaa;
   }
 }

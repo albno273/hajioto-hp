@@ -1,0 +1,46 @@
+@use 'src/styles/mixin.scss' as *;
+@use 'src/styles/constants.scss' as *;
+
+.container {
+  .slide {
+    width: 20rem; /* slidesPerView="auto" と併用 */
+    text-align: center;
+
+    .image {
+      width: 20rem;
+      height: 20rem;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 32% 8%;
+      box-shadow: 0 2px 6px rgba(#000, 0.15);
+
+      // @include v.hover-scale; /* ホバー拡大 */
+    }
+
+    .float {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      display: flex;
+      flex-direction: row;
+
+      .act,
+      .floor {
+        padding: 1rem;
+        font-size: 1rem;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 12px;
+      }
+
+      .floor {
+        margin-left: 1rem;
+      }
+    }
+
+    .name {
+      margin-top: 1rem;
+      font-size: 1.6rem;
+    }
+  }
+}

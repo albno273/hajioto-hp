@@ -1,9 +1,6 @@
 import { createClient } from 'microcms-js-sdk';
 
-// TODO: 要整備
-export type Cast = {
-  name: string;
-};
+import { Attention, Cast } from '@/types';
 
 if (!process.env.SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required');
@@ -33,4 +30,12 @@ export const getCastDetail = async (contentId: string) => {
     contentId,
   });
   return cast;
+};
+
+// 注意事項一覧を取得
+export const getAttentions = async () => {
+  const attentions = await client.getList<Attention>({
+    endpoint: 'attentions',
+  });
+  return attentions;
 };

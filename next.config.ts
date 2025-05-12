@@ -1,21 +1,22 @@
-import path from "path";
-import type { NextConfig } from "next";
+import path from 'path';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "export",
+  output: 'export',
   trailingSlash: true,
   eslint: {
-    dirs: ["src"],
+    dirs: ['src'],
   },
   compiler: {
     styledComponents: true,
   },
   images: {
-    domains: ["images.microcms-assets.io"],
+    domains: ['images.microcms-assets.io'],
+    unoptimized: true,
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, "src/styles")],
+    includePaths: [path.join(__dirname, 'src/styles')],
   },
 };
 

@@ -1,0 +1,77 @@
+@use 'src/styles/mixin.scss' as *;
+@use 'src/styles/constants.scss' as *;
+
+/* ------- スライドメニュー ------- */
+$nav-w: 100%; /* メニュー幅 */
+$z-nav: 40;
+$z-btn: 50;
+
+.menu {
+  position: fixed;
+  inset: 0 auto 0 100%; /* 画面外（右）に配置 */
+  z-index: $z-nav;
+  width: $nav-w;
+  overflow-y: auto;
+  background: $c-logo-gradient;
+  // box-shadow: -4px 0 12px rgba(#000, 0.08);
+
+  /* open クラスで画面内へ */
+  transform: translateX(0);
+  transition: transform 0.35s;
+  &.open {
+    transform: translateX(-100%);
+  }
+
+  @include mq(pc) {
+    background: transparent;
+    box-shadow: none;
+    transform: translateX(calc((-100% + #{$s-sp-max}) / 2));
+    transition: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2.5rem 1rem 1.5rem;
+    margin: 0;
+    list-style: none;
+
+    .item a {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+/* ------- ハンバーガーボタン ------- */
+.hamburger {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: $z-btn;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+  background: $c-logo-gradient;
+  border: 1px solid white;
+  border-radius: 50%;
+
+  span {
+    width: 24px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+  }
+
+  @include mq(pc) {
+    display: none;
+  }
+}

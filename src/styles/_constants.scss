@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+// サイズ定義
+// $s-
+
+$s-sp-max: 480px;
+
+// カラー定義
+// $c-
+
+$c-logo-gradient: linear-gradient(to right, #4ec1f0, #59beb9 50%, #a4d3b0 100%);
+$c-logo-gradient-reverse: linear-gradient(to left, #4ec1f0, #59beb9 50%, #a4d3b0 100%);
