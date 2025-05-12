@@ -13,7 +13,7 @@ $z-btn: 50;
   width: $nav-w;
   overflow-y: auto;
   background: $c-logo-gradient;
-  box-shadow: -4px 0 12px rgba(#000, 0.08);
+  // box-shadow: -4px 0 12px rgba(#000, 0.08);
 
   /* open クラスで画面内へ */
   transform: translateX(0);
@@ -60,14 +60,14 @@ $z-btn: 50;
   width: 54px;
   height: 54px;
   cursor: pointer;
-  background: white;
-  border: 1px solid $c-logo-gradient;
+  background: $c-logo-gradient;
+  border: 1px solid white;
   border-radius: 50%;
 
   span {
     width: 24px;
-    height: 3px;
-    background: $c-logo-gradient;
+    height: 4px;
+    background: white;
     border-radius: 2px;
   }
 
