@@ -21,7 +21,7 @@
 
     .left {
       left: 0;
-      background: $c-logo-gradient;
+      background: linear-gradient(to right, white, white 95%, #ccc 100%);
 
       .logo {
         display: none;
@@ -52,7 +52,7 @@
 
     .right {
       right: 0;
-      background: $c-logo-gradient-reverse;
+      background: linear-gradient(to left, white, white 95%, #ccc 100%);
 
       .nav {
         display: none;
