@@ -1,10 +1,10 @@
-import { Kiwi_Maru, Montserrat } from 'next/font/google';
+import { Zen_Kaku_Gothic_New, Montserrat } from 'next/font/google';
 
-export const kiwiMaru = Kiwi_Maru({
+export const zenKakuGothicNew = Zen_Kaku_Gothic_New({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '700'],
   display: 'swap',
-  variable: '--font-kiwi-maru',
+  variable: '--font-zkg-new',
   fallback: ['sans-serif'],
 });
 
@@ -13,5 +13,4 @@ export const montserrat = Montserrat({
   weight: ['400', '700'],
   display: 'swap',
   variable: '--font-montserrat',
-  fallback: ['sans-serif'],
 });
