@@ -18,8 +18,38 @@
     }
   }
 
+  .subtitle {
+    position: relative;
+    display: inline-block;
+    padding-inline: 5rem; /* テキスト左右に余白 */
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 1.2;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 60%;
+      width: 3rem; /* 線の長さ */
+      height: 2px;
+      content: '';
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: 0;
+      background: $c-logo-gradient-left;
+    }
+    &::after {
+      right: 0;
+      background: $c-logo-gradient-right;
+    }
+  }
+
   .about {
-    margin: 3rem 0;
+    margin: 5rem 0;
     text-align: center;
 
     .desc {
@@ -27,8 +57,8 @@
     }
 
     .title {
-      margin-top: 1.2rem;
-      font-size: 2.8rem;
+      margin-top: 1.5rem;
+      font-size: 3.2rem;
       font-weight: bold;
     }
 
@@ -43,7 +73,7 @@
 
     .map {
       width: 100%;
-      margin: 2rem 0;
+      margin: 4rem 0;
 
       iframe {
         width: calc(100vw - 5rem);
@@ -51,52 +81,47 @@
         height: calc(100vw - 5rem);
         max-height: calc($s-sp-max - 5rem);
         border: 0;
+        border-radius: 5%;
       }
     }
   }
 
   .casts {
-    margin: 3rem 0;
+    margin: 5rem 0;
     text-align: center;
 
-    .subtitle {
-      margin-bottom: 3rem;
-      font-size: 2.8rem;
-      font-weight: bold;
+    .slider {
+      margin: 2rem 0 4rem;
     }
 
     .more {
-      width: 60%;
+      width: 24rem;
       max-width: calc(100% - 2rem);
       padding: 1rem 2rem;
       margin: 2rem auto 0;
       font-size: 2rem;
       text-align: center;
-      border: 1px solid black;
-      border-radius: 12px;
+      cursor: pointer;
+      border-right: 3px solid $c-accent-3;
+      border-left: 3px solid $c-accent-1;
+      border-radius: 100vh;
+      transition: all 0.2s;
+
+      &:hover {
+        border-right: 5px solid $c-accent-3;
+        border-left: 5px solid $c-accent-1;
+      }
     }
   }
 
   .ticket {
-    margin: 3rem 0;
+    margin: 5rem 0;
     text-align: center;
-
-    .subtitle {
-      margin-bottom: 3rem;
-      font-size: 2.8rem;
-      font-weight: bold;
-    }
   }
 
   .attention {
-    margin: 3rem 0;
+    margin: 5rem 0;
     text-align: center;
-
-    .subtitle {
-      margin-bottom: 3rem;
-      font-size: 2.8rem;
-      font-weight: bold;
-    }
 
     .list {
       padding: 0;

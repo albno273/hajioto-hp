@@ -17,7 +17,7 @@ const Home: React.FC = async () => {
         <Image src='/flyer/flyer_tmp2.png' alt='flyer' fill className={s.image} />
       </div>
       <div className={s.about} id='about'>
-        <p className={s.desc}>青春系オールジャンルDJパーティイベント</p>
+        <p className={s.desc}>青春系オールジャンルDJパーティ</p>
         <p className={s.title}>拝啓、はじまりの音へ</p>
         <p className={s.date}>2025/12/20(土) 13:00〜20:00</p>
         <p className={s.at}>渋谷 club asia</p>
@@ -31,8 +31,10 @@ const Home: React.FC = async () => {
       </div>
       <div className={s.casts} id='casts'>
         <p className={s.subtitle}>出演者</p>
-        <Slider items={casts.contents} />
-        <div className={s.more}>出演者一覧はこちら</div>
+        <div className={s.slider}>
+          <Slider items={casts.contents} />
+        </div>
+        <div className={s.more}>一覧はこちら</div>
       </div>
       <div className={s.ticket} id='ticket'>
         <p className={s.subtitle}>チケット</p>

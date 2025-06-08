@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { kiwiMaru } from '@/utils/fonts';
+import { kiwiMaru, montserrat } from '@/utils/fonts';
 import cx from 'classnames';
 import Image from 'next/image';
 
@@ -30,7 +30,7 @@ const items: NavItem[] = [
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <html lang='ja'>
-      <body className={cx(kiwiMaru.variable, s.layout)}>
+      <body className={cx(kiwiMaru.variable, montserrat.variable, s.layout)}>
         <main className={s.main}>
           <div className={s.left}>
             <div className={s.logo}>

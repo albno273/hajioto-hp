@@ -11,36 +11,39 @@
       height: 20rem;
       aspect-ratio: 1;
       object-fit: cover;
-      border-radius: 32% 8%;
-      box-shadow: 0 2px 6px rgba(#000, 0.15);
+      border-radius: 5%;
+      box-shadow: 0 4px 12px rgba(#000, 0.35);
 
       // @include v.hover-scale; /* ホバー拡大 */
     }
 
     .float {
       position: absolute;
-      top: 0%;
-      left: 0%;
+      right: -3%;
+      bottom: 18%;
       display: flex;
       flex-direction: row;
+      opacity: 0.5;
 
       .act,
       .floor {
-        padding: 1rem;
-        font-size: 1rem;
-        background-color: white;
-        border: 1px solid black;
-        border-radius: 12px;
-      }
-
-      .floor {
-        margin-left: 1rem;
+        font-family: var(--font-montserrat);
+        font-size: 2.8rem;
+        line-height: 1.2;
+        color: white;
+        text-align: right;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        -webkit-text-stroke: 1.5px $c-accent-1;
+        /* stylelint-disable-next-line property-no-unknown */
+        text-stroke: 1.5px $c-accent-1;
+        paint-order: stroke;
       }
     }
 
     .name {
-      margin-top: 1rem;
-      font-size: 1.6rem;
+      margin-top: 1.6rem;
+      font-size: 2rem;
     }
   }
 }
