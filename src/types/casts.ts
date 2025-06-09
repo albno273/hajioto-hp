@@ -30,4 +30,5 @@ export type Cast = {
   floor: Floor[];
   links: Links;
   profile: string;
+  eventAffiliates: string;
 };

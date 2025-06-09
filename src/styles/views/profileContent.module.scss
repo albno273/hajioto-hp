@@ -1,0 +1,74 @@
+@use 'src/styles/mixin.scss' as *;
+@use 'src/styles/constants.scss' as *;
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 800px;
+  overflow-y: scroll;
+  text-align: center;
+
+  .avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8%;
+    box-shadow: 0 4px 12px rgba(black, 0.15);
+  }
+
+  .name {
+    margin: 1.2rem 0 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .eventAffiliates {
+    margin: -0.6rem 0 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .bio {
+    font-size: 1rem;
+    line-height: 1.55;
+    white-space: pre-wrap;
+  }
+
+  .affiliates {
+    margin-bottom: 1rem;
+
+    .affItem {
+      margin-bottom: 0.4rem;
+
+      .affName {
+        margin-bottom: 0.2rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .social,
+  .affSocial {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    a {
+      display: inline-block;
+      margin: 1rem auto 0;
+      font-size: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .affSocial {
+    a {
+      margin: 0 auto;
+    }
+  }
+}

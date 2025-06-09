@@ -1,16 +1,11 @@
-// import Image from "next/image";
-import styles from '@/styles/app/Home.module.scss';
-
 import { getCasts } from '@/libs/client';
+import CastsView from '@/views/casts';
+
+/** 完全静的化を明示 ※動的でも可 */
+export const dynamic = 'force-static';
 
 export default async function Casts() {
   const casts = await getCasts();
 
-  return (
-    <div className={styles.body}>
-      <main>
-        <p>{casts.contents[0].name}</p>
-      </main>
-    </div>
-  );
+  return <CastsView casts={casts} />;
 }

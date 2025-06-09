@@ -19,6 +19,20 @@ export const client = createClient({
 export const getCasts = async () => {
   const casts = await client.getList<Cast>({
     endpoint: 'casts',
+    queries: {
+      limit: 100,
+    },
+  });
+  return casts;
+};
+
+// ピックアップ出演者一覧を取得
+export const getPickUpCasts = async () => {
+  const casts = await client.getList<Cast>({
+    endpoint: 'casts',
+    queries: {
+      filters: 'pickup[equals]true',
+    },
   });
   return casts;
 };

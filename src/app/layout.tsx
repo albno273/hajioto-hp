@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { kiwiMaru } from '@/utils/fonts';
+import { zenKakuGothicNew, montserrat } from '@/utils/fonts';
 import cx from 'classnames';
 import Image from 'next/image';
 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const items: NavItem[] = [
   { id: 'top', label: 'トップ', href: '#top' },
-  { id: 'about', label: '概要', href: '#about' },
+  { id: 'about', label: 'イベント概要', href: '#about' },
   { id: 'casts', label: '出演者', href: '#casts' },
   { id: 'ticket', label: 'チケット', href: '#ticket' },
   { id: 'attention', label: '注意事項', href: '#attention' },
@@ -30,7 +30,7 @@ const items: NavItem[] = [
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <html lang='ja'>
-      <body className={cx(kiwiMaru.variable, s.layout)}>
+      <body className={cx(montserrat.variable, zenKakuGothicNew.variable, s.layout)}>
         <main className={s.main}>
           <div className={s.left}>
             <div className={s.logo}>
