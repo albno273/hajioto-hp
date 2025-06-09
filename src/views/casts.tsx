@@ -30,7 +30,7 @@ const CastsView: React.FC<Props> = ({ casts }) => {
           <div className={s.list}>
             {mainFloor.map((item, id) => (
               <div className={s.listItem} key={`main-${id}`} onClick={() => setSelected(item)}>
-                <Image src={item.image.url} alt={item.name} width={160} height={160} className={s.image} priority />
+                <Image src={item.image.url} alt={item.name} width={150} height={150} className={s.image} priority />
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}

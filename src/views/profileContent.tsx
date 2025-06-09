@@ -12,7 +12,7 @@ const ProfileContent: React.FC<Props> = ({ cast }) => (
   <div className={s.wrap}>
     <Image src={cast.image.url} alt={cast.name} width={160} height={160} />
     <h3>{cast.name}</h3>
-    <p>{cast.profile}</p>
+    <p className={s.bio}>{cast.profile}</p>
 
     {cast.links.twitter && (
       <a href={cast.links.twitter} target='_blank' rel='noopener noreferrer'>

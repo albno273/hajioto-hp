@@ -55,18 +55,28 @@
     display: grid;
     grid-template-columns: repeat(2, auto); /* 2 段に固定                   */
     grid-auto-flow: row; /* 縦方向に並べ、次の列へ折返す */
-    gap: 3rem 1rem;
-    margin: 0 2rem 5rem;
+    gap: 3rem 0.5rem;
+    margin: 0 1rem 5rem;
+
+    @include mq(tab) {
+      gap: 3rem 1rem;
+      margin: 0 2rem 5rem;
+    }
 
     .listItem {
-      width: 18rem; /* slidesPerView="auto" と併用 */
+      width: 45vw;
       margin: 0 auto;
       text-align: center;
 
-      .image {
+      @include mq(tab) {
         width: 18rem;
-        height: 18rem;
+      }
+
+      .image {
+        width: 15rem;
+        height: 15rem;
         aspect-ratio: 1;
+        margin: 0 auto;
         object-fit: cover;
         border-radius: 5%;
         box-shadow: 0 4px 12px rgba(#000, 0.35);
@@ -76,7 +86,11 @@
 
       .name {
         margin-top: 1.6rem;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+
+        @include mq(tab) {
+          font-size: 1.6rem;
+        }
       }
     }
   }

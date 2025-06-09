@@ -19,6 +19,9 @@ export const client = createClient({
 export const getCasts = async () => {
   const casts = await client.getList<Cast>({
     endpoint: 'casts',
+    queries: {
+      limit: 100,
+    },
   });
   return casts;
 };
