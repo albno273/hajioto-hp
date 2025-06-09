@@ -1,0 +1,49 @@
+@use 'src/styles/mixin.scss' as *;
+@use 'src/styles/constants.scss' as *;
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  max-width: 320px;
+  text-align: center;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(#000, 0.15);
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: gray;
+}
+
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: gray;
+}
+
+.social {
+  margin-top: 0.5rem;
+  a {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.875rem;
+    color: #fff;
+    text-decoration: none;
+    background: gray;
+    border-radius: 9999px;
+    transition: background 0.25s;
+
+    &:hover {
+      background: lighten(gray, 8%);
+    }
+  }
+}

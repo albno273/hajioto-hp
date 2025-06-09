@@ -23,6 +23,17 @@ export const getCasts = async () => {
   return casts;
 };
 
+// ピックアップ出演者一覧を取得
+export const getPickUpCasts = async () => {
+  const casts = await client.getList<Cast>({
+    endpoint: 'casts',
+    queries: {
+      filters: 'pickup[equals]true',
+    },
+  });
+  return casts;
+};
+
 // 出演者の詳細を取得
 export const getCastDetail = async (contentId: string) => {
   const cast = await client.getListDetail<Cast>({

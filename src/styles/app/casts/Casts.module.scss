@@ -1,0 +1,83 @@
+@use 'src/styles/mixin.scss' as *;
+@use 'src/styles/constants.scss' as *;
+
+.casts {
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+
+  .subtitle,
+  .subsubtitle {
+    position: relative;
+    display: inline-block;
+    padding-inline: 5rem; /* テキスト左右に余白 */
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 1.2;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      width: 3rem; /* 線の長さ */
+      height: 2px;
+      content: '';
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: 0;
+      background: $c-logo-gradient-left;
+    }
+    &::after {
+      right: 0;
+      background: $c-logo-gradient-right;
+    }
+  }
+
+  .subtitle {
+    margin-top: 3rem;
+  }
+
+  .subsubtitle {
+    padding-inline: 4rem;
+    font-size: 2rem;
+
+    &::before,
+    &::after {
+      width: 2rem;
+    }
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 段に固定                   */
+    grid-auto-flow: row; /* 縦方向に並べ、次の列へ折返す */
+    gap: 3rem 1rem;
+    margin: 0 2rem 5rem;
+
+    .listItem {
+      width: 18rem; /* slidesPerView="auto" と併用 */
+      margin: 0 auto;
+      text-align: center;
+
+      .image {
+        width: 18rem;
+        height: 18rem;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 5%;
+        box-shadow: 0 4px 12px rgba(#000, 0.35);
+
+        // @include v.hover-scale; /* ホバー拡大 */
+      }
+
+      .name {
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

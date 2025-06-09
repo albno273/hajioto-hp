@@ -2,13 +2,14 @@ import Image from 'next/image';
 
 import s from '@/styles/app/Home.module.scss';
 
-import { getAttentions, getCasts } from '@/libs/client';
+import { getAttentions, getPickUpCasts } from '@/libs/client';
 
 import Slider from '@/views/slider';
 import Footer from '@/views/footer';
+import Link from 'next/link';
 
 const Home: React.FC = async () => {
-  const casts = await getCasts();
+  const puCasts = await getPickUpCasts();
   const attentions = await getAttentions();
 
   return (
@@ -32,9 +33,11 @@ const Home: React.FC = async () => {
       <div className={s.casts} id='casts'>
         <p className={s.subtitle}>出演者</p>
         <div className={s.slider}>
-          <Slider items={casts.contents} />
+          <Slider items={puCasts.contents} />
         </div>
-        <div className={s.more}>一覧はこちら</div>
+        <Link href='/casts'>
+          <div className={s.more}>一覧はこちら</div>
+        </Link>
       </div>
       <div className={s.ticket} id='ticket'>
         <p className={s.subtitle}>チケット</p>
