@@ -26,6 +26,7 @@ const castNavItems: NavItem[] = [
   { id: 'main', label: 'Main', href: '#main' },
   { id: 'second', label: 'Second', href: '#second' },
   { id: 'lounge', label: 'Lounge', href: '#lounge' },
+  { id: 'design', label: 'Design', href: '#design' },
 ];
 
 const NavMenu: React.FC = () => {

@@ -18,6 +18,7 @@ const CastsView: React.FC<Props> = ({ casts }) => {
   const mainFloor = casts.contents.filter((c) => c.floor[0] === 'Main Floor');
   const secondFloor = casts.contents.filter((c) => c.floor[0] === '2F Floor');
   const loungeFloor = casts.contents.filter((c) => c.floor[0] === 'Lounge Floor');
+  const designer = casts.contents.filter((c) => c.floor[0] === 'None');
 
   const [selected, setSelected] = useState<Cast | null>(null);
 
@@ -63,6 +64,19 @@ const CastsView: React.FC<Props> = ({ casts }) => {
           <div className={s.list}>
             {loungeFloor.map((item, id) => (
               <div className={s.listItem} key={`lounge-${id}`} onClick={() => setSelected(item)}>
+                <Image src={item.image.url} alt={item.name} width={160} height={160} className={s.image} priority />
+                <p className={s.name}>{item.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p className={s.subtitle} id='design'>
+            Designer
+          </p>
+          <div className={s.list}>
+            {designer.map((item, id) => (
+              <div className={s.listItem} key={`designer-${id}`} onClick={() => setSelected(item)}>
                 <Image src={item.image.url} alt={item.name} width={160} height={160} className={s.image} priority />
                 <p className={s.name}>{item.name}</p>
               </div>

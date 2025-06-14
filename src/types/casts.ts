@@ -11,9 +11,9 @@ type Affiliate = {
   other: string | null;
 };
 
-export type Act = 'DJ' | 'VJ' | 'Live Paint';
+export type Act = 'DJ' | 'VJ' | 'Live Paint' | 'Design';
 
-export type Floor = 'Main Floor' | '2F Floor' | 'Lounge Floor';
+export type Floor = 'Main Floor' | '2F Floor' | 'Lounge Floor' | 'None';
 
 type Links = {
   twitter: string;
