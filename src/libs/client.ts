@@ -32,6 +32,7 @@ export const getPickUpCasts = async () => {
     endpoint: 'casts',
     queries: {
       filters: 'pickup[equals]true',
+      limit: 30,
     },
   });
   return casts;
@@ -50,6 +51,9 @@ export const getCastDetail = async (contentId: string) => {
 export const getAttentions = async () => {
   const attentions = await client.getList<Attention>({
     endpoint: 'attentions',
+    queries: {
+      limit: 100,
+    },
   });
   return attentions;
 };
