@@ -39,7 +39,9 @@ const NavMenu: React.FC = () => {
       {/* メニュー本体（右側スライドイン） */}
       <nav className={cx(s.menu, open ? s.open : '')}>
         <div className={s.logo}>
-          <Image src='/logo/logo_blur.png' alt='logo' fill objectFit='contain' />
+          <Link href='/' onClick={() => pathname !== '/' && setOpen(false)}>
+            <Image src='/logo/logo_for_link.png' alt='logo' fill objectFit='contain' />
+          </Link>
         </div>
         <ul className={s.list}>
           {items.map(({ id, label, href }) => (

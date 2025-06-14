@@ -35,8 +35,9 @@ $z-btn: 50;
 
   .logo {
     position: relative;
-    width: 100%;
-    height: 20rem;
+    width: 80%;
+    aspect-ratio: 500 / 220;
+    margin: 5rem auto;
 
     @include mq(pc) {
       display: none;

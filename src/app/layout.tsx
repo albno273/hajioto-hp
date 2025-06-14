@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: '拝啓、はじまりの音へ',
   description: '青春系オールジャンルDJパーティ『拝啓、はじまりの音へ』 2025/12/20(土) 渋谷club asiaにて開催！',
   keywords: ['拝啓、はじまりの音へ', 'はじおと', 'DJパーティ', 'オールジャンルパーティ'],
-  icons: { icon: '/favicon.png', apple: '/apple-icon.png' },
+  icons: { icon: '/favicon.ico', apple: '/apple-icon.png' },
   openGraph: {
     type: 'website',
     url: 'https://haikei-hajimari-no-oto-he.vercel.app/',

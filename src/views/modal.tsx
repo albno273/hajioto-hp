@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import s from '@/styles/views/modal.module.scss';
