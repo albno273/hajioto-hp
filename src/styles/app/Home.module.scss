@@ -142,22 +142,23 @@
   }
 
   .attention {
-    margin: 5rem 0;
+    margin: 5rem 0 2rem;
     text-align: center;
 
     .list {
       padding: 0;
       margin: 0;
-      list-style: none; /* デフォルトの丸を消す */
+      list-style: none;
 
       .item {
-        /* アクセント：左端に 3px のライン */
         position: relative;
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
-        padding: 0.7rem 1rem;
-        margin: 0.4rem 1rem 0;
+        padding: 0.4rem 0 0.4rem 1.2rem;
+        margin: 0.8rem 1rem 0;
+        font-size: 1.2rem;
+        text-align: left;
 
         &::before {
           position: absolute;
