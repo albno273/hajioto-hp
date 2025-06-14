@@ -10,7 +10,13 @@ interface Props {
 
 const ProfileContent: React.FC<Props> = ({ cast }) => (
   <div className={s.wrap}>
-    <Image src={cast.image.url} alt={cast.name} width={160} height={160} className={s.avatar} />
+    <Image
+      src={`${cast.image.url}?fm=webp&w=320&h=320`}
+      alt={cast.name}
+      width={160}
+      height={160}
+      className={s.avatar}
+    />
     <p className={s.name}>{cast.name}</p>
     {cast.eventAffiliates && <p className={s.eventAffiliates}>{cast.eventAffiliates}</p>}
 

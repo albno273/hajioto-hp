@@ -16,7 +16,7 @@ interface Props {
 
 const CastsView: React.FC<Props> = ({ casts }) => {
   const mainFloor = casts.contents.filter((c) => c.floor[0] === 'Main Floor');
-  const secondFloor = casts.contents.filter((c) => c.floor[0] === '2F Floor');
+  const subFloor = casts.contents.filter((c) => c.floor[0] === 'Sub Floor');
   const loungeFloor = casts.contents.filter((c) => c.floor[0] === 'Lounge Floor');
   const designer = casts.contents.filter((c) => c.floor[0] === 'None');
 
@@ -38,20 +38,34 @@ const CastsView: React.FC<Props> = ({ casts }) => {
           <div className={s.list}>
             {mainFloor.map((item, id) => (
               <div className={s.listItem} key={`main-${id}`} onClick={() => setSelected(item)}>
-                <Image src={item.image.url} alt={item.name} width={180} height={180} className={s.image} priority />
+                <Image
+                  src={`${item.image.url}?fm=webp&w=360&h=360`}
+                  alt={item.name}
+                  width={180}
+                  height={180}
+                  className={s.image}
+                  priority
+                />
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}
           </div>
         </div>
         <div>
-          <p className={s.subtitle} id='second'>
-            2F Floor
+          <p className={s.subtitle} id='sub'>
+            Sub Floor
           </p>
           <div className={s.list}>
-            {secondFloor.map((item, id) => (
-              <div className={s.listItem} key={`2f-${id}`} onClick={() => setSelected(item)}>
-                <Image src={item.image.url} alt={item.name} width={160} height={160} className={s.image} priority />
+            {subFloor.map((item, id) => (
+              <div className={s.listItem} key={`sub-${id}`} onClick={() => setSelected(item)}>
+                <Image
+                  src={`${item.image.url}?fm=webp&w=360&h=360`}
+                  alt={item.name}
+                  width={160}
+                  height={160}
+                  className={s.image}
+                  priority
+                />
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}
@@ -64,7 +78,14 @@ const CastsView: React.FC<Props> = ({ casts }) => {
           <div className={s.list}>
             {loungeFloor.map((item, id) => (
               <div className={s.listItem} key={`lounge-${id}`} onClick={() => setSelected(item)}>
-                <Image src={item.image.url} alt={item.name} width={160} height={160} className={s.image} priority />
+                <Image
+                  src={`${item.image.url}?fm=webp&w=360&h=360`}
+                  alt={item.name}
+                  width={160}
+                  height={160}
+                  className={s.image}
+                  priority
+                />
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}
@@ -77,7 +98,14 @@ const CastsView: React.FC<Props> = ({ casts }) => {
           <div className={s.list}>
             {designer.map((item, id) => (
               <div className={s.listItem} key={`designer-${id}`} onClick={() => setSelected(item)}>
-                <Image src={item.image.url} alt={item.name} width={160} height={160} className={s.image} priority />
+                <Image
+                  src={`${item.image.url}?fm=webp&w=360&h=360`}
+                  alt={item.name}
+                  width={160}
+                  height={160}
+                  className={s.image}
+                  priority
+                />
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}

@@ -13,7 +13,7 @@ type Affiliate = {
 
 export type Act = 'DJ' | 'VJ' | 'Live Paint' | 'Design';
 
-export type Floor = 'Main Floor' | '2F Floor' | 'Lounge Floor' | 'None';
+export type Floor = 'Main Floor' | 'Sub Floor' | 'Lounge Floor' | 'None';
 
 type Links = {
   twitter: string;

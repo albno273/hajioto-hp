@@ -30,8 +30,8 @@ const floorClass = (floor: Floor): string => {
   switch (floor) {
     case 'Main Floor':
       return 'main';
-    case '2F Floor':
-      return 'second';
+    case 'Sub Floor':
+      return 'sub';
     case 'Lounge Floor':
       return 'lounge';
     default:
@@ -45,7 +45,14 @@ const Slider: React.FC<SliderProps> = ({ items }) => {
       <Swiper spaceBetween={32} slidesPerView='auto' slidesOffsetBefore={32} slidesOffsetAfter={32}>
         {items.map((item, id) => (
           <SwiperSlide key={`casts-slider-${id}`} className={s.slide}>
-            <Image src={item.image.url} alt={item.name} width={160} height={160} className={s.image} priority />
+            <Image
+              src={`${item.image.url}?fm=webp&w=320&h=320`}
+              alt={item.name}
+              width={160}
+              height={160}
+              className={s.image}
+              priority
+            />
             <div className={s.float}>
               <p className={cx(s.act, `${actClass(item.act[0])}`)}>{item.act[0]}</p>
               <p className={cx(s.floor, `${floorClass(item.floor[0])}`)}>{item.floor[0]}</p>

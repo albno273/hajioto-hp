@@ -23,9 +23,9 @@ const topNavItems: NavItem[] = [
 
 const castNavItems: NavItem[] = [
   { id: 'top', label: 'トップページへ', href: '/' },
-  { id: 'main', label: 'Main', href: '#main' },
-  { id: 'second', label: 'Second', href: '#second' },
-  { id: 'lounge', label: 'Lounge', href: '#lounge' },
+  { id: 'main', label: 'Main Floor', href: '#main' },
+  { id: 'sub', label: 'Sub Floor', href: '#sub' },
+  { id: 'lounge', label: 'Lounge Floor', href: '#lounge' },
   { id: 'design', label: 'Design', href: '#design' },
 ];
 
@@ -41,7 +41,7 @@ const NavMenu: React.FC = () => {
       <nav className={cx(s.menu, open ? s.open : '')}>
         <div className={s.logo}>
           <Link href='/' onClick={() => pathname !== '/' && setOpen(false)}>
-            <Image src='/logo/logo_for_link.png' alt='logo' fill objectFit='contain' />
+            <Image src='/logo/logo_for_link.webp' alt='logo' fill objectFit='contain' />
           </Link>
         </div>
         <ul className={s.list}>

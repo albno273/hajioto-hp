@@ -38,7 +38,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <main className={s.main}>
           <div className={s.left}>
             <div className={s.logo}>
-              <Image src='/logo/logo_blur.png' alt='logo' fill className={s.image} />
+              <Image src='/logo/logo_blur.webp' alt='logo' fill className={s.image} />
             </div>
           </div>
           <div className={s.right} />
