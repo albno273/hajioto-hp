@@ -68,7 +68,14 @@
     width: 100vw;
     max-width: $s-sp-max;
     margin: 0 auto;
-    overflow-y: clip;
+    overflow-y: scroll;
+
+    /* スクロールバー非表示（Firefox） */
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     @include mq(sp) {
       position: relative;

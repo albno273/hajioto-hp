@@ -2,6 +2,7 @@
 
 // src/components/NavMenu.tsx
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import s from '@/styles/views/navMenu.module.scss';
 import cx from 'classnames';
@@ -12,13 +13,26 @@ export interface NavItem {
   label: string;
   href: string;
 }
+const topNavItems: NavItem[] = [
+  { id: 'top', label: 'トップ', href: '#top' },
+  { id: 'about', label: 'イベント概要', href: '#about' },
+  { id: 'casts', label: '出演者', href: '#casts' },
+  { id: 'ticket', label: 'チケット', href: '#ticket' },
+  { id: 'attention', label: '注意事項', href: '#attention' },
+];
 
-interface Props {
-  items: NavItem[];
-}
+const castNavItems: NavItem[] = [
+  { id: 'top', label: 'トップページへ', href: '/' },
+  { id: 'main', label: 'Main', href: '#main' },
+  { id: 'second', label: 'Second', href: '#second' },
+  { id: 'lounge', label: 'Lounge', href: '#lounge' },
+];
 
-const NavMenu: React.FC<Props> = ({ items }) => {
+const NavMenu: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const items = pathname === '/' ? topNavItems : castNavItems;
 
   return (
     <>

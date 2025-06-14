@@ -24,20 +24,29 @@ const CastsView: React.FC<Props> = ({ casts }) => {
   return (
     <>
       <div className={s.casts}>
-        <p className={s.subtitle}>出演者</p>
+        <p className={s.title}>出演者</p>
+        <p className={s.notice}>
+          ※現時点で発表されている出演者のみを表示しています。
+          <br />
+          画像を選択すると詳細が表示されます。
+        </p>
         <div>
-          <p className={s.subsubtitle}>Main Floor</p>
+          <p className={s.subtitle} id='main'>
+            Main Floor
+          </p>
           <div className={s.list}>
             {mainFloor.map((item, id) => (
               <div className={s.listItem} key={`main-${id}`} onClick={() => setSelected(item)}>
-                <Image src={item.image.url} alt={item.name} width={150} height={150} className={s.image} priority />
+                <Image src={item.image.url} alt={item.name} width={180} height={180} className={s.image} priority />
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}
           </div>
         </div>
         <div>
-          <p className={s.subsubtitle}>2F Floor</p>
+          <p className={s.subtitle} id='second'>
+            2F Floor
+          </p>
           <div className={s.list}>
             {secondFloor.map((item, id) => (
               <div className={s.listItem} key={`2f-${id}`} onClick={() => setSelected(item)}>
@@ -48,7 +57,9 @@ const CastsView: React.FC<Props> = ({ casts }) => {
           </div>
         </div>
         <div>
-          <p className={s.subsubtitle}>Lounge Floor</p>
+          <p className={s.subtitle} id='lounge'>
+            Lounge Floor
+          </p>
           <div className={s.list}>
             {loungeFloor.map((item, id) => (
               <div className={s.listItem} key={`lounge-${id}`} onClick={() => setSelected(item)}>

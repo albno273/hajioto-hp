@@ -6,8 +6,8 @@
   font-size: 1.6rem;
   text-align: center;
 
-  .subtitle,
-  .subsubtitle {
+  .title,
+  .subtitle {
     position: relative;
     display: inline-block;
     padding-inline: 5rem; /* テキスト左右に余白 */
@@ -37,11 +37,12 @@
     }
   }
 
-  .subtitle {
+  .title {
     margin-top: 3rem;
+    margin-bottom: 0;
   }
 
-  .subsubtitle {
+  .subtitle {
     padding-inline: 4rem;
     font-size: 2rem;
 
@@ -49,6 +50,11 @@
     &::after {
       width: 2rem;
     }
+  }
+
+  .notice {
+    margin: 1rem 0 4rem;
+    font-size: 1.4rem;
   }
 
   .list {
@@ -82,15 +88,16 @@
         box-shadow: 0 4px 12px rgba(#000, 0.35);
 
         // @include v.hover-scale; /* ホバー拡大 */
+
+        @include mq(tab) {
+          width: 18rem;
+          height: 18rem;
+        }
       }
 
       .name {
-        margin-top: 1.6rem;
-        font-size: 1.2rem;
-
-        @include mq(tab) {
-          font-size: 1.6rem;
-        }
+        margin-top: 1.2rem;
+        font-size: 1.6rem;
       }
     }
   }

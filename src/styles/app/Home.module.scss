@@ -81,7 +81,7 @@
         height: calc(100vw - 5rem);
         max-height: calc($s-sp-max - 5rem);
         border: 0;
-        border-radius: 5%;
+        border-radius: 3%;
       }
     }
   }
@@ -90,15 +90,36 @@
     margin: 5rem 0;
     text-align: center;
 
+    .pickup {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto 2rem;
+
+      span {
+        font-size: 2rem;
+
+        .marker {
+          position: absolute;
+          top: 60%;
+          z-index: -1;
+          width: 100%;
+          height: 40%;
+          background: $c-logo-gradient;
+          opacity: 0.4;
+        }
+      }
+    }
+
     .slider {
-      margin: 2rem 0 4rem;
+      margin: 2rem 0;
     }
 
     .more {
+      display: inline-block;
       width: 24rem;
       max-width: calc(100% - 2rem);
-      padding: 1rem 2rem;
-      margin: 2rem auto 0;
+      padding: 1rem 0;
+      margin: 0 auto;
       font-size: 2rem;
       color: black;
       text-align: center;

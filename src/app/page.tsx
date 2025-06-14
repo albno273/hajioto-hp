@@ -32,6 +32,12 @@ const Home: React.FC = async () => {
       </div>
       <div className={s.casts} id='casts'>
         <p className={s.subtitle}>出演者</p>
+        <p className={s.pickup}>
+          <span>
+            <p className={s.marker} />
+            Pickup casts
+          </span>
+        </p>
         <div className={s.slider}>
           <Slider items={puCasts.contents} />
         </div>

@@ -5,13 +5,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 800px;
-  overflow-y: scroll;
+  max-height: 550px;
+  overflow-y: auto;
   text-align: center;
+  scrollbar-width: thin;
+
+  @include mq(pc) {
+    max-height: 720px;
+  }
 
   .avatar {
-    width: 160px;
-    height: 160px;
+    width: 16rem;
+    height: 16rem;
     object-fit: cover;
     border-radius: 8%;
     box-shadow: 0 4px 12px rgba(black, 0.15);
@@ -25,11 +30,11 @@
 
   .eventAffiliates {
     margin: -0.6rem 0 1.2rem;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
   }
 
   .bio {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.55;
     white-space: pre-wrap;
   }
@@ -57,7 +62,7 @@
     a {
       display: inline-block;
       margin: 1rem auto 0;
-      font-size: 1rem;
+      font-size: 1.2rem;
       text-decoration: none;
 
       &:hover {
