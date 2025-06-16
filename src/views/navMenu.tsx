@@ -14,7 +14,7 @@ export interface NavItem {
   href: string;
 }
 const topNavItems: NavItem[] = [
-  { id: 'top', label: 'トップ', href: '#top' },
+  { id: 'page-top', label: 'トップ', href: '#page-top' },
   { id: 'about', label: 'イベント概要', href: '#about' },
   { id: 'casts', label: '出演者', href: '#casts' },
   { id: 'ticket', label: 'チケット', href: '#ticket' },
@@ -22,7 +22,7 @@ const topNavItems: NavItem[] = [
 ];
 
 const castNavItems: NavItem[] = [
-  { id: 'top', label: 'トップページへ', href: '/' },
+  { id: 'page-top', label: 'トップページへ', href: '/' },
   { id: 'main', label: 'Main Floor', href: '#main' },
   { id: 'sub', label: 'Sub Floor', href: '#sub' },
   { id: 'lounge', label: 'Lounge Floor', href: '#lounge' },

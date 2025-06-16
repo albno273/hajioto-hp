@@ -6,11 +6,16 @@
   font-size: 1.6rem;
   text-align: center;
 
+  .section {
+    padding-top: 3rem;
+    margin-top: -3rem;
+  }
+
   .title,
   .subtitle {
     position: relative;
     display: inline-block;
-    padding-inline: 5rem; /* テキスト左右に余白 */
+    padding-inline: 5rem;
     margin-bottom: 3rem;
     font-size: 2.8rem;
     font-weight: bold;
@@ -21,7 +26,7 @@
     &::after {
       position: absolute;
       top: 50%;
-      width: 3rem; /* 線の長さ */
+      width: 3rem;
       height: 2px;
       content: '';
       transform: translateY(-50%);
@@ -59,8 +64,8 @@
 
   .list {
     display: grid;
-    grid-template-columns: repeat(2, auto); /* 2 段に固定                   */
-    grid-auto-flow: row; /* 縦方向に並べ、次の列へ折返す */
+    grid-template-columns: repeat(2, auto);
+    grid-auto-flow: row;
     gap: 3rem 0.5rem;
     margin: 0 1rem 5rem;
 
@@ -87,7 +92,7 @@
         border-radius: 5%;
         box-shadow: 0 4px 12px rgba(#000, 0.35);
 
-        // @include v.hover-scale; /* ホバー拡大 */
+        // @include v.hover-scale;
 
         @include mq(tab) {
           width: 18rem;

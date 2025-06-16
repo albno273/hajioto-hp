@@ -1,11 +1,10 @@
 @use 'src/styles/mixin.scss' as *;
 @use 'src/styles/constants.scss' as *;
 
-/* 背景オーバーレイ */
 .backdrop {
   position: fixed;
   inset: 0;
-  z-index: 100; /* ナビより上に */
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +12,6 @@
   animation: fadeIn 0.25s;
 }
 
-/* モーダル本体 */
 .content {
   width: 100%;
   max-width: min(90vw, 480px);
@@ -24,7 +22,6 @@
   animation: popIn 0.25s;
 }
 
-/* フェード & ポップアニメ */
 @keyframes fadeIn {
   from {
     opacity: 0;

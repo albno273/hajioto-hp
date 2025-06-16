@@ -1,20 +1,15 @@
 @use 'src/styles/mixin.scss' as *;
 @use 'src/styles/constants.scss' as *;
 
-/* ------- スライドメニュー ------- */
-$z-nav: 40;
-$z-btn: 50;
-
 .menu {
   position: fixed;
-  inset: 0 auto 0 100%; /* 画面外（右）に配置 */
-  z-index: $z-nav;
+  inset: 0 auto 0 100%;
+  z-index: 10;
   width: 100%;
   overflow-y: auto;
   background: $c-logo-gradient;
   // box-shadow: -4px 0 12px rgba(#000, 0.08);
 
-  /* open クラスで画面内へ */
   transform: translateX(0);
   transition: transform 0.35s;
   &.open {
@@ -23,8 +18,8 @@ $z-btn: 50;
 
   @include mq(pc) {
     display: flex;
-    align-items: center; /* 上下中央揃え */
-    justify-content: center; /* 左右中央揃え */
+    align-items: center;
+    justify-content: center;
     width: calc((100% - #{$s-sp-max}) / 2);
     overflow-x: hidden;
     background: transparent;
@@ -70,12 +65,11 @@ $z-btn: 50;
   }
 }
 
-/* ------- ハンバーガーボタン ------- */
 .hamburger {
   position: fixed;
   right: 1.25rem;
   bottom: 1.25rem;
-  z-index: $z-btn;
+  z-index: 50;
   display: flex;
   flex-direction: column;
   gap: 6px;

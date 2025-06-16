@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { zenKakuGothicNew, montserrat } from '@/utils/fonts';
 import cx from 'classnames';
 import Image from 'next/image';
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <html lang='ja'>
+      <GoogleTagManager gtmId='GTM-NT5858K9' />
       <body className={cx(montserrat.variable, zenKakuGothicNew.variable, s.layout)}>
         <main className={s.main}>
           <div className={s.left}>

@@ -14,7 +14,7 @@ const Home: React.FC = async () => {
 
   return (
     <div className={s.home}>
-      <div className={s.flyer} id='top'>
+      <div className={s.flyer} id='page-top'>
         <Image src='/flyer/web-flyer.webp' alt='flyer' fill className={s.image} />
       </div>
       <div className={s.about} id='about'>
@@ -42,11 +42,41 @@ const Home: React.FC = async () => {
           <Slider items={puCasts.contents} />
         </div>
         <Link href='/casts'>
-          <div className={s.more}>一覧はこちら</div>
+          <div className={s.more}>
+            <span>一覧はこちら</span>
+          </div>
         </Link>
       </div>
       <div className={s.ticket} id='ticket'>
         <p className={s.subtitle}>チケット</p>
+        <div className={s.category}>
+          <p className={s.name}>早割チケット</p>
+          <p className={s.price}>¥5,000</p>
+          <div className={s.tAttention}>
+            <p className={s.list}>少しだけお得な前売チケットです。</p>
+          </div>
+        </div>
+        <div className={s.category}>
+          <p className={s.name}>U-20割チケット</p>
+          <p className={s.price}>¥4,000</p>
+          <div className={s.tAttention}>
+            <p className={s.list}>イベント当日に20歳以下の方が対象です。</p>
+            <p className={s.list}>※2004年(平成16年)12月21日以後に生まれた方が対象</p>
+            <p className={s.list}>※21歳以上の方が購入された場合、現地にて前売チケットとの差額をいただきます。</p>
+          </div>
+        </div>
+        <div className={s.category}>
+          <p className={s.name}>前売チケット</p>
+          <p className={s.price}>¥5,500</p>
+          <div className={s.tAttention}>
+            <p className={s.list}>通常の前売チケットです。</p>
+          </div>
+        </div>
+        <Link href='https://t.livepocket.jp/e/haikei_hajioto' target='_blank' rel='noopener noreferrer'>
+          <div className={s.more}>
+            <span>ご購入はこちら</span>
+          </div>
+        </Link>
       </div>
       <div className={s.attention} id='attention'>
         <p className={s.subtitle}>注意事項</p>

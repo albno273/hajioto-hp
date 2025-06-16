@@ -9,6 +9,7 @@
     "build": "next build"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.3",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
     "microcms-js-sdk": "^3.2.0",
