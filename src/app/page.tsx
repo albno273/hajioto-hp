@@ -15,7 +15,7 @@ const Home: React.FC = async () => {
   return (
     <div className={s.home}>
       <div className={s.flyer} id='top'>
-        <Image src='/flyer/flyer.webp' alt='flyer' fill className={s.image} />
+        <Image src='/flyer/web-flyer.webp' alt='flyer' fill className={s.image} />
       </div>
       <div className={s.about} id='about'>
         <p className={s.desc}>青春系オールジャンルDJパーティ</p>
