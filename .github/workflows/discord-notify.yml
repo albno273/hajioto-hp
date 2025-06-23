@@ -8,7 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: curl
-        uses: sozo-design/curl@v1.0.2
-        with:
-          args: |
-            -H "Content-Type: application/json" -X POST -d '{"content": "ビルドが完了しました！\nhttps://haikei-hajimari-no-oto-he.vercel.app/"}' ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl -H "Content-Type: application/json" -X POST -d '{"content": "ビルドが完了しました！\nhttps://haikei-hajimari-no-oto-he.vercel.app/"}' ${{ secrets.DISCORD_WEBHOOK_URL }}
