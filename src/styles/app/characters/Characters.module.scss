@@ -1,0 +1,96 @@
+@use 'src/styles/mixin.scss' as *;
+@use 'src/styles/constants.scss' as *;
+
+.characters {
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+
+  .title,
+  .subtitle {
+    position: relative;
+    display: inline-block;
+    padding-inline: 5rem;
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 1.2;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      width: 3rem;
+      height: 2px;
+      content: '';
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: 0;
+      background: $c-logo-gradient-left;
+    }
+    &::after {
+      right: 0;
+      background: $c-logo-gradient-right;
+    }
+  }
+
+  .title {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  .subtitle {
+    padding-inline: 4rem;
+    font-size: 2rem;
+
+    &::before,
+    &::after {
+      width: 2rem;
+    }
+
+    &:first-child {
+      margin-top: 3rem;
+    }
+  }
+
+  .section {
+    padding-top: 3rem;
+    margin-top: -3rem;
+
+    .charaImage {
+      position: relative;
+      width: 90%;
+      aspect-ratio: 1447 / 1925;
+      margin: 0 auto 3rem;
+
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .bio {
+      margin: 0 3rem 2rem;
+      font-size: 1.35rem;
+
+      ol {
+        display: inline-block;
+        margin: 1rem 0.5rem 3rem;
+        text-align: left;
+
+        li {
+          list-style: circle !important;
+
+          .inlineLink {
+            margin: 0 6px;
+          }
+        }
+      }
+    }
+  }
+}
