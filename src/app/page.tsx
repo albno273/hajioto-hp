@@ -47,6 +47,14 @@ const Home: React.FC = async () => {
           </div>
         </Link>
       </div>
+      <div className={s.characters} id='characters'>
+        <p className={s.subtitle}>キャラクター</p>
+        <Link href='/characters'>
+          <div className={s.more}>
+            <span>詳細はこちら</span>
+          </div>
+        </Link>
+      </div>
       <div className={s.ticket} id='ticket'>
         <p className={s.subtitle}>チケット</p>
         <div className={s.category}>

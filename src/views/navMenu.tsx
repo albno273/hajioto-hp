@@ -17,6 +17,7 @@ const topNavItems: NavItem[] = [
   { id: 'page-top', label: 'トップ', href: '#page-top' },
   { id: 'about', label: 'イベント概要', href: '#about' },
   { id: 'casts', label: '出演者', href: '#casts' },
+  { id: 'characters', label: 'キャラクター', href: '#characters' },
   { id: 'ticket', label: 'チケット', href: '#ticket' },
   { id: 'attention', label: '注意事項', href: '#attention' },
 ];
@@ -29,11 +30,31 @@ const castNavItems: NavItem[] = [
   { id: 'design', label: 'Design', href: '#design' },
 ];
 
+const charaNavItems: NavItem[] = [
+  { id: 'page-top', label: 'トップページへ', href: '/' },
+  { id: 'haru', label: '天槌 ハル', href: '#haru' },
+  { id: 'riko', label: '木乃狗 リコ', href: '#riko' },
+  { id: 'fanfic', label: '二次創作について', href: '#fanfic' },
+];
+
+const switchNav = (path: string): NavItem[] => {
+  switch (path) {
+    case '/':
+      return topNavItems;
+    case '/casts/':
+      return castNavItems;
+    case '/characters/':
+      return charaNavItems;
+    default:
+      return topNavItems;
+  }
+};
+
 const NavMenu: React.FC = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const items = pathname === '/' ? topNavItems : castNavItems;
+  const items = switchNav(pathname);
 
   return (
     <>

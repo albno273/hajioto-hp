@@ -14,7 +14,7 @@ const Characters: React.FC = async () => {
   return (
     <div className={s.characters}>
       <p className={s.title}>キャラクター</p>
-      <div className={s.section}>
+      <div className={s.section} id='haru'>
         <p className={s.subtitle}>天槌 ハル (あまて はる)</p>
         <div className={s.charaImage}>
           <Image src='/characters/haru.webp' alt='あまて はる' fill className={s.image} />
@@ -26,7 +26,7 @@ const Characters: React.FC = async () => {
           本人は乗り気ではなかったみたいなのですが……
         </p>
       </div>
-      <div className={s.section}>
+      <div className={s.section} id='riko'>
         <p className={s.subtitle}>木乃狗 リコ (きのいぬ りこ)</p>
         <div className={s.charaImage}>
           <Image src='/characters/riko.webp' alt='きのいぬ りこ' fill className={s.image} />
@@ -37,7 +37,7 @@ const Characters: React.FC = async () => {
           ギターとボーカルを担当し、成績は優秀ながら、ピアスはするし、喧嘩っ早いしで、ハルの頭を悩ませることもしばしばの様子です……
         </p>
       </div>
-      <div className={s.section}>
+      <div className={s.section} id='fanfic'>
         <p className={s.subtitle}>二次創作について</p>
         <p className={s.bio}>
           『天槌 ハル』『木乃狗 リコ』については、以下の条件を遵守したうえで自由に二次創作をしていただいてかまいません。
