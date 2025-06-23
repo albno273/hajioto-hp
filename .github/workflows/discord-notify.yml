@@ -7,5 +7,7 @@ jobs:
   discord_notify:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-      curl ${{ secrets.DISCORD_WEBHOOK_URL }} -H "Content-Type: application/json" -X POST -d '{"content": "ビルドが完了しました！\nhttps://haikei-hajimari-no-oto-he.vercel.app/"}'
+    - name: curl
+      uses: sozo-design/curl@v1.0.2
+      with:
+        args: ${{ secrets.DISCORD_WEBHOOK_URL }} -H "Content-Type: application/json" -X POST -d '{"content": "ビルドが完了しました！\nhttps://haikei-hajimari-no-oto-he.vercel.app/"}'
