@@ -75,6 +75,7 @@
     }
 
     .listItem {
+      position: relative;
       width: 45vw;
       margin: 0 auto;
       text-align: center;
@@ -98,6 +99,22 @@
           width: 18rem;
           height: 18rem;
         }
+      }
+
+      .new {
+        position: absolute;
+        top: -5%;
+        right: 2%;
+        width: 4rem;
+        height: 4rem;
+        aspect-ratio: 1/1;
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 4rem;
+        color: white;
+        text-align: center;
+        background: $c-logo-gradient;
+        border-radius: 50%;
       }
 
       .name {

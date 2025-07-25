@@ -25,6 +25,7 @@ export type Cast = {
   name: string;
   image: Image;
   pickup: boolean;
+  new: boolean;
   affiliates: Affiliate[] | null;
   act: Act[];
   floor: Floor[];
