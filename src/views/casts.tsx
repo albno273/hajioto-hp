@@ -44,6 +44,7 @@ const CastsView: React.FC<Props> = ({ casts }) => {
                   className={s.image}
                   priority
                 />
+                {item.new && <div className={s.new}>NEW!</div>}
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}
@@ -62,6 +63,7 @@ const CastsView: React.FC<Props> = ({ casts }) => {
                   className={s.image}
                   priority
                 />
+                {item.new && <div className={s.new}>NEW!</div>}
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}
@@ -80,6 +82,7 @@ const CastsView: React.FC<Props> = ({ casts }) => {
                   className={s.image}
                   priority
                 />
+                {item.new && <div className={s.new}>NEW!</div>}
                 <p className={s.name}>{item.name}</p>
               </div>
             ))}
